@@ -1,0 +1,26 @@
+﻿{
+  "name": "新浪微博洗白白",
+  "version": "0.1",
+  "manifest_version": 2,
+  "description": "去除新浪微博的广告",
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "background":{
+	"page":"bg.html"
+  },
+  "content_scripts":[
+  {
+    "js":["scripts/jquery.min.js","scripts/CS_main.js"],
+    "matches":["http://*.weibo.com/*","https://*.weibo.com/*"],
+    "run_at":"document_end"
+  }],
+  "web_accessible_resources":[
+    "scripts/injected.js"
+  ],
+  "permissions": [
+	"http://*.weibo.com/*",
+	"https://*.weibo.com/*",
+    "tabs"],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}
