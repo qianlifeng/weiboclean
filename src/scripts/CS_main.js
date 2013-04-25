@@ -1,8 +1,21 @@
 $(function () {
+    console.log("微博洗白白 start");
     weibo.removeUnusedDiv();
     weibo.seperateModules();
     weibo.showAllGroup();
 });
+
+function InjetFunction(fn) {
+   var script = document.createElement('script');
+   script.setAttribute("type", "application/javascript");
+   script.textContent = '(' + fn + ')();';
+   document.documentElement.appendChild(script); // run the script
+   document.documentElement.removeChild(script); // clean up
+}
+
+injectScript = function() {
+
+}
 
 var weibo =
 {
@@ -14,6 +27,10 @@ var weibo =
         "#trustPagelet_recom_allinonev5",
         "#trustPagelet_recom_memberv5",
         "#pl_rightmod_yunying",
+        "#Pl_Rightmod_Helpbox",
+        "#pl_rightmod_weibodesk",
+        "#pl_rightmod_feedback",
+        "#pl_common_reportentry",
         ".global_footer", //footer
         "#pl_leftnav_group .levmore", //group more
         "#pl_content_biztips"

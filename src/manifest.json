@@ -13,7 +13,7 @@
   {
     "js":["scripts/jquery.min.js","scripts/CS_main.js"],
     "matches":["http://*.weibo.com/*","https://*.weibo.com/*"],
-    "run_at":"document_end"
+    "run_at":"document_start"
   }],
   "web_accessible_resources":[
     "scripts/injected.js"
