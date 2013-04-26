@@ -1,0 +1,5 @@
+$(function () {
+    console.log("微博洗白白 start");
+    weiboclean.removeUnusedDiv();
+    weiboclean.seperateModules();
+});

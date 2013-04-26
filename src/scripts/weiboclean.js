@@ -1,10 +1,3 @@
-$(function () {
-    console.log("微博洗白白 start");
-    weibo.removeUnusedDiv();
-    weibo.seperateModules();
-    weibo.showAllGroup();
-});
-
 function InjetFunction(fn) {
    var script = document.createElement('script');
    script.setAttribute("type", "application/javascript");
@@ -17,7 +10,7 @@ injectScript = function() {
 
 }
 
-var weibo =
+var weiboclean =
 {
     unusedSelectorForV5: new Array(
 		"#trustPagelet_recom_interestv5", //maybe interest in the right nav
@@ -35,6 +28,12 @@ var weibo =
         "#pl_leftnav_group .levmore", //group more
         "#pl_content_biztips"
     ),
+
+    replaceLink: function(){
+        var oldHref = $(".gn_title a").attr("href");
+        $(".gn_title a").attr("href","javascript:window.location.href = '"+oldHref+"'");
+        $("#pl_leftnav_common .level_1_Box .lev:first a").attr("href","javascript:window.location.href = '"+oldHref+"'");
+    },
 
 
     isV5: function () {
@@ -63,9 +62,9 @@ var weibo =
 
     showAllGroup: function () {
         if (this.isV5()) {
+            console.log("is v5");
             $("#pl_leftnav_group div[node-type='moreList']").css("display", "");
         }
     }
 
 }
-
