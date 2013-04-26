@@ -12,6 +12,7 @@
   "content_scripts":[
   {
     "js":["scripts/jquery.min.js","scripts/weiboclean.js","scripts/CS_start.js"],
+    "css":[ "css/cs_start.css" ],
     "matches":["http://*.weibo.com/*","https://*.weibo.com/*"],
     "run_at":"document_start"
   },

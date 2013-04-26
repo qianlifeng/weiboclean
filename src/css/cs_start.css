@@ -1,0 +1,79 @@
+#trustPagelet_recom_interestv5
+{
+    display:none;
+}
+#pl_leftnav_app
+{
+    display:none;
+}
+#pl_rightmod_noticeboard
+{
+    display:none;
+}
+/*右侧广告*/
+#pl_rightmod_ads35
+{
+    display:none;
+}
+#trustPagelet_recom_allinonev5
+{
+    display:none;
+}
+#trustPagelet_recom_memberv5
+{
+    display:none;
+}
+#pl_rightmod_yunying
+{
+    display:none;
+}
+#Pl_Rightmod_Helpbox
+{
+    display:none;
+}
+#pl_rightmod_weibodesk
+{
+    display:none;
+}
+#pl_rightmod_feedback
+{
+    display:none;
+}
+#pl_common_reportentry
+{
+    display:none;
+}
+.global_footer
+{
+    display:none;
+}
+/*左侧的分组*/
+#pl_leftnav_group .levmore
+{
+    display:none;
+}
+#pl_leftnav_group > div > div
+{
+    display:inline !important;
+}
+div.levmore > a
+{
+    display:none !important;
+}
+#pl_content_biztips
+{
+    display:none;
+}
+
+/*头像圆角*/
+.WB_face img
+{
+    border-radius: 15px; 
+    box-shadow: 2px 2px 2px #bbb;
+}
+
+/*隐藏会员和达人的小图标*/
+i.ico_member,i.ico_member_dis,i.ico_club
+{
+    display:none;
+}

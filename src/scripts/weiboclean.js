@@ -62,9 +62,18 @@ var weiboclean =
 
     showAllGroup: function () {
         if (this.isV5()) {
-            console.log("is v5");
             $("#pl_leftnav_group div[node-type='moreList']").css("display", "");
         }
+    },
+    blockFromItem:function(item)
+    {
+        console.log("remove item");
+        $(".WB_from a[rel='nofollow']").each(function(){
+            var from = $.trim($(this).html());
+            if(from == item)
+            {
+                $(this).closest(".WB_feed_type").css("background-color","red");
+            }
+        }); 
     }
-
 }
